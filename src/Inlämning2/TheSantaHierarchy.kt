@@ -24,7 +24,8 @@ fun findNisse(input: String, list: List<Employee>) : List<String>{
 
     fun findHeadOf(names : String, b : Boolean, counter : Int) : List<String>{
 
-        return if(if(input == "Tomten") list2.add("$names\n" + (list.get(counter).isMyBoss)) else if(counter == 0) return list2 else false) list2
+        return if(if(input == "Tomten") list2.add("$names\n" + (list.get(counter).isMyBoss))
+                else if(counter == 0) return list2 else false) list2
         else findHeadOf(if(list.map { it.name }.contains(input)){ list.get(counter).isMyBoss }
                else { "" } , list2.add(names), counter - 1).distinct()
     }
